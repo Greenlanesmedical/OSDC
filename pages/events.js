@@ -5,7 +5,7 @@ import HeritageFooter from '../components/HeritageFooter';
 import SEOHead from '../components/SEOHead';
 import EventCard from '../components/EventCard';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useState, useMemo } from 'react';
 
 export default function EventsPage({ items = [] }) {
   const [showPast, setShowPast] = useState(false);
