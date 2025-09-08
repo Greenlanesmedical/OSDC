@@ -27,7 +27,7 @@ export default function LuxeHeader() {
           <a href="#showcase" className={linkClass}>Showcase</a>
           <a href="#discover" className={linkClass}>Discover</a>
           <a href="#visit" className={linkClass}>Visit</a>
-        </nav>
+        <a href="/demo1/getting-here" className="px-3 py-2 text-sm text-gray-700 hover:text-black">Getting here</a></nav>
       </div>
     </header>
   );

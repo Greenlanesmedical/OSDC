@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 const FEATURES = [
+  // Main images already set; supportImages used in grid
+
   { title: 'Live Storefront', copy: 'Real‑time drops and appointments with subtle haptics and delight.', img: '/feature-modern-1.jpg' },
   { title: 'Immersive Windows', copy: 'Parallax scenes echoing Oxford Street facades and lighting.', img: '/feature-modern-2.jpg' },
   { title: 'Concierge Connect', copy: 'Tap to chat, reserve, or arrange pick‑up in minutes.', img: '/feature-modern-3.jpg' },
@@ -51,8 +53,10 @@ export default function StickyShowcase() {
               <h3 className="text-2xl font-semibold">{f.title}</h3>
               <p className="mt-3 text-gray-600">{f.copy}</p>
               <div className="mt-6 grid grid-cols-3 gap-3">
-                {[1,2,3].map(k => (
-                  <div key={k} className="h-24 rounded-xl bg-gradient-to-br from-gray-50 to-white border card-hover"></div>
+                {["/feature-modern-4.jpg","/feature-modern-5.jpg","/feature-modern-6.jpg"].map(src => (
+                  <div key={src} className="rounded-xl overflow-hidden border card-hover">
+                    <img src={src} alt="Showcase detail" className="w-full h-24 object-cover" />
+                  </div>
                 ))}
               </div>
             </article>

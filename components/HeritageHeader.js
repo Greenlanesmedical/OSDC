@@ -12,7 +12,7 @@ export default function HeritageHeader() {
         </div>
         <nav className="flex-1 flex items-center justify-end gap-6 text-sm">
           {items.map(i => (
-            <Link key={i} href={"#" + i.toLowerCase()} className="text-gray-800 hover:text-black">{i}</Link>
+            <Link key={i} href={i === "Visiting" ? "/demo2/getting-here" : ("#" + i.toLowerCase())} className="text-gray-800 hover:text-black">{i}</Link>
           ))}
         </nav>
       </div>
