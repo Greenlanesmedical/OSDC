@@ -4,8 +4,8 @@ import { PHOTO_SOURCES } from '../lib/photoSources';
 import Image from 'next/image';
 // components/HeritageHero.js
 export default function HeritageHero() {
-  return (
-    <Head>
+  return (<>
+<Head>
   <link rel="preload" as="image" href="/hero-heritage.webp" imagesrcset="/hero-heritage.webp 1x" />
 </Head>
 
@@ -20,5 +20,6 @@ export default function HeritageHero() {
         </div>
       </div>
     </section>
+</>
   );
 }

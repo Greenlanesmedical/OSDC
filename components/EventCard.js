@@ -13,7 +13,7 @@ export default function EventCard({ event }) {
   }).toString();
   return (
     <article className="rounded-2xl overflow-hidden border gold-border shadow-subtle bg-white">
-      <Image src=event.img || '/editorial-6.webp' alt="" width={1600} height={900} className="w-full h-48 object-cover img-darken img-grade" sizes="(max-width: 768px) 100vw, 50vw" />
+      <Image src={event.img or '/editorial-6.webp'} alt="" width={1600} height={900} className="w-full h-48 object-cover img-darken img-grade" sizes="(max-width: 768px) 100vw, 50vw" />
       <div className="p-5">
         <div className="text-xs text-gray-500">{new Date(event.start).toLocaleString()}</div>
         <h3 className="font-head text-2xl mt-1">{event.title}</h3>
