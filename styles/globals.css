@@ -1,15 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Heritage Tokens (scoped) --- */
 :root {
   --heritage-green: #0a3d2e;
   --heritage-gold: #c1a24a;
-  --heritage-gold-text: #9f8a3b;
+  --heritage-ivory: #faf8f3;
 }
-html, body { margin: 0; padding: 0; }
+
+/* --- Utilities (namespaced to avoid collisions) --- */
 .img-darken { filter: brightness(0.9); }
 .img-grade { filter: contrast(1.05) saturate(1.05); }
 .img-grade-strong { filter: contrast(1.1) saturate(1.1); }
 .gold-border { border-color: var(--heritage-gold); }
 .shadow-subtle { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.heritage-bg { background: linear-gradient(180deg,#fff, #faf8f3); }
+.heritage-bg { background: linear-gradient(180deg,#fff, var(--heritage-ivory)); }
 .img-card { background: #fff; }
 .img-gradient { background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.45)); }
-.font-head { font-family: var(--font-cormorant), serif; }
+.font-head { font-family: var(--font-cormorant), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; }
+
+/* Optional: make headings a touch tighter without nuking Tailwind defaults */
+h1,h2,h3 { letter-spacing: -0.01em; }
