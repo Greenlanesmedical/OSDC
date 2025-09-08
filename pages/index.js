@@ -16,9 +16,7 @@ import HeritageDepartments from '../components/HeritageDepartments';
 import ShopDirectory from '../components/ShopDirectory';
 import dynamic from 'next/dynamic';
 const NewsCarousel = dynamic(() => import('../components/NewsCarousel'), { ssr: false });
-import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('../components/Map'), { ssr: false });
-import dynamic from 'next/dynamic';
 const HeritageNewsletter = dynamic(() => import('../components/HeritageNewsletter'), { ssr: false });
 import HeritageFooter from '../components/HeritageFooter';
 
