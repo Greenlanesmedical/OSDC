@@ -50,7 +50,7 @@ export default function StakeholderHub() {
           {groups.map(g => (
             <article key={g.title} className="rounded-2xl overflow-hidden border gold-border shadow-subtle img-card">
               <div className="relative h-48 overflow-hidden">
-                <Image src=g.img alt={g.title} width={1600} height={900} className="w-full h-full object-cover img-darken" sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src={g.img || '/editorial-1.webp'} alt={g.title} width={1600} height={900} className="w-full h-full object-cover img-darken" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 img-gradient" />
                 <div className="absolute bottom-3 left-3 right-3 text-white">
                   <h3 className="font-head text-2xl">{g.title}</h3>
