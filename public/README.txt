@@ -1,0 +1,1 @@
+Place optional hero images here named hero-modern.jpg and hero-heritage.jpg (CC or owned).
