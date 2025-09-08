@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Winter Windows Launch",
+    "start": "2025-11-15T18:00:00Z",
+    "end": "2025-11-15T21:00:00Z",
+    "description": "A district-wide evening unveiling with live music and late openings.",
+    "location": "Oxford Street, London",
+    "img": "https://source.unsplash.com/KPJnO93ps7Y/1600x900",
+    "tags": [
+      "Seasonal"
+    ]
+  },
+  {
+    "title": "Spring Streets Pilot",
+    "start": "2026-03-20T10:00:00Z",
+    "end": "2026-03-20T17:00:00Z",
+    "description": "Pedestrian-first pilot featuring outdoor seating, greening and activations.",
+    "location": "Oxford Street, London",
+    "img": "https://source.unsplash.com/FvC2VJ-3XJ8/1600x900",
+    "tags": [
+      "Public Realm"
+    ]
+  }
+]
