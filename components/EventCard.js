@@ -1,5 +1,6 @@
 // components/EventCard.js
 import Image from 'next/image';
+import { PHOTO_SOURCES } from '../lib/photoSources';
 
 function toICSDate(d) {
   return new Date(d).toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
@@ -17,7 +18,7 @@ export default function EventCard({ event }) {
   return (
     <article className="rounded-2xl overflow-hidden border gold-border shadow-subtle bg-white">
       <Image
-        src={event.img || '/editorial-6.webp'}
+        src={event.img || PHOTO_SOURCES.editorial6}
         alt={event.title || 'Event image'}
         width={1600}
         height={900}

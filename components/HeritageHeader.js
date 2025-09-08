@@ -1,25 +1,20 @@
 // components/HeritageHeader.js
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-const HeaderSearch = dynamic(()=>import('./HeaderSearch'), { ssr:false });
 
 export default function HeritageHeader() {
-  const items = ['Overview','Background','Requirements','Brand','Website','Stakeholders','Visiting','Timeline'];
   return (
-    <header className="w-full bg-white sticky top-0 z-40 shadow-subtle">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex-1"></div>
-        <div className="text-2xl font-head tracking-wide">
-          <span className="px-3 py-1 border gold-border rounded-full gold-text">OS</span>
-        </div>
-        <nav className="flex-1 flex items-center justify-end gap-6 text-sm">
-          {items.map(i => (
-            <Link key={i} href={i === "Visiting" ? "/getting-here" : (i === "Stakeholders" ? "#stakeholders" : (i === "Timeline" ? "#timeline" : ("#" + i.toLowerCase())))} className="text-gray-800 hover:text-black">{i}</Link>
-          ))}
-        <HeaderSearch />
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+      <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+        <Link href="/" className="font-head text-xl">Oxford Street</Link>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <a href="#departments" className="hover:underline">Departments</a>
+          <a href="#services" className="hover:underline">Services</a>
+          <Link href="/news" className="hover:underline">News</Link>
+          <Link href="/events" className="hover:underline">Events</Link>
+          <a href="#visiting" className="hover:underline">Visiting</a>
+          <a href="#stakeholders" className="text-xs opacity-80 hover:opacity-100">For Stakeholders</a>
         </nav>
       </div>
-      <div className="rule-hairline"></div>
     </header>
   );
 }

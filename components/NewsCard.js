@@ -1,11 +1,12 @@
 // components/NewsCard.js
 import Image from 'next/image';
+import { PHOTO_SOURCES } from '../lib/photoSources';
 
 export default function NewsCard({ item }) {
   return (
     <article className="rounded-2xl overflow-hidden border gold-border shadow-subtle bg-white">
       <Image
-        src={item.img || '/editorial-5.webp'}
+        src={item.img || PHOTO_SOURCES.editorial5}
         alt={item.title || 'News image'}
         width={1600}
         height={900}
