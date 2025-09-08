@@ -1,29 +1,35 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import UtilityBar from "../components/UtilityBar";
+import ModernHeader from "../components/ModernHeader";
+import ModernHero from "../components/ModernHero";
+import SectionNav from "../components/SectionNav";
+import StickyDevice from "../components/StickyDevice";
+import StickyDeviceAlt from "../components/StickyDeviceAlt";
+import FeatureGridModern from "../components/FeatureGridModern";
+import StatsStrip from "../components/StatsStrip";
 import ShopDirectory from "../components/ShopDirectory";
 import Map from "../components/Map";
+import NewsCarousel from "../components/NewsCarousel";
 
 export default function Demo1(){
   return (
-    <main id="main" className="modern">
-      <Header />
-      <UtilityBar tone="modern" />
-      <Hero title="Oxford Street District" subtitle="Modern Luxe — a sleek, inclusive experience for visitors, residents and businesses." tone="modern" />
-      <section className="section" id="news" aria-labelledby="news-title">
+    <main id="main">
+      <ModernHeader />
+      <ModernHero />
+      <SectionNav />
+      <div className="snap">
+        <StickyDevice />
+        <StickyDeviceAlt />
+        <FeatureGridModern />
+        <StatsStrip />
+        <NewsCarousel />
+        <ShopDirectory />
+        <Map />
+      </div>
+      <footer className="footer">
         <div className="container">
-          <h2 id="news-title">Our focus</h2>
-          <div className="cards">
-            <article className="card"><h3>High streets</h3><p>Support diverse retail & hospitality with clear wayfinding and events.</p></article>
-            <article className="card"><h3>Clean & safe</h3><p>Cleaner air, safer walking & cycling with public realm improvements.</p></article>
-            <article className="card"><h3>Culture</h3><p>Celebrate the district with seasonal moments and public art.</p></article>
-          </div>
+          <div>© {new Date().getFullYear()} OSDC — Modern Luxe demo.</div>
+          <div className="small">Tip: add <code>hero-modern.mp4</code> and poster <code>hero-modern.jpg</code> to <code>/public</code> for a cinematic hero.</div>
         </div>
-      </section>
-      <ShopDirectory tone="modern" />
-      <Map />
-      <Footer />
+      </footer>
     </main>
   );
 }
