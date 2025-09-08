@@ -1,9 +1,17 @@
-import Image from 'next/image';
 // components/NewsCard.js
+import Image from 'next/image';
+
 export default function NewsCard({ item }) {
   return (
     <article className="rounded-2xl overflow-hidden border gold-border shadow-subtle bg-white">
-      <Image src={item.img || '/editorial-5.webp'} || '/editorial-5.webp' alt="" width={1600} height={900} className="w-full h-48 object-cover img-darken img-grade" sizes="(max-width: 768px) 100vw, 50vw" />
+      <Image
+        src={item.img || '/editorial-5.webp'}
+        alt={item.title || 'News image'}
+        width={1600}
+        height={900}
+        className="w-full h-48 object-cover img-darken img-grade"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
       <div className="p-5">
         <div className="text-xs text-gray-500">{item.date}</div>
         <h3 className="font-head text-2xl mt-1">{item.title}</h3>
