@@ -1,15 +1,20 @@
-import { Html, Head, Main, NextScript } from 'next/document'
-import { Inter, Instrument_Serif } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'], variable: '--font-ui' })
-const instrument = Instrument_Serif({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-head' })
+// pages/_document.js
+import { Html, Head, Main, NextScript } from 'next/document';
+
 export default function Document() {
   return (
-    <Html className={`${inter.variable} ${instrument.variable}`}>
-      <Head />
+    <Html>
+      <Head>
+        {/* Load Google Fonts globally (avoid next/font in _document) */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Instrument+Serif:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
