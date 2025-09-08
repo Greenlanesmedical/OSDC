@@ -1,35 +1,35 @@
-import ModernHeader from "../components/ModernHeader";
-import ModernHero from "../components/ModernHero";
-import SectionNav from "../components/SectionNav";
-import StickyDevice from "../components/StickyDevice";
-import StickyDeviceAlt from "../components/StickyDeviceAlt";
-import FeatureGridModern from "../components/FeatureGridModern";
-import StatsStrip from "../components/StatsStrip";
-import ShopDirectory from "../components/ShopDirectory";
-import Map from "../components/Map";
-import NewsCarousel from "../components/NewsCarousel";
+// pages/demo1.js
+import LuxeHeader from '../components/LuxeHeader';
+import ParallaxHero from '../components/ParallaxHero';
+import StickyShowcase from '../components/StickyShowcase';
+import InteractiveGrid from '../components/InteractiveGrid';
+import Testimonials from '../components/Testimonials';
+import VisitCTA from '../components/VisitCTA';
+import StatsStrip from '../components/StatsStrip';
+import Map from '../components/Map';
 
-export default function Demo1(){
+export default function ModernLuxe() {
   return (
-    <main id="main">
-      <ModernHeader />
-      <ModernHero />
-      <SectionNav />
-      <div className="snap">
-        <StickyDevice />
-        <StickyDeviceAlt />
-        <FeatureGridModern />
-        <StatsStrip />
-        <NewsCarousel />
-        <ShopDirectory />
-        <Map />
-      </div>
-      <footer className="footer">
-        <div className="container">
-          <div>© {new Date().getFullYear()} OSDC — Modern Luxe demo.</div>
-          <div className="small">Tip: add <code>hero-modern.mp4</code> and poster <code>hero-modern.jpg</code> to <code>/public</code> for a cinematic hero.</div>
+    <main className="min-h-screen bg-white">
+      <LuxeHeader />
+      <ParallaxHero />
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <StatsStrip />
         </div>
-      </footer>
+      </section>
+      <StickyShowcase />
+      <InteractiveGrid />
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Find us</h2>
+          <div className="rounded-2xl overflow-hidden border shadow-subtle">
+            <Map />
+          </div>
+        </div>
+      </section>
+      <Testimonials />
+      <VisitCTA />
     </main>
   );
 }
