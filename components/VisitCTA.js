@@ -7,7 +7,6 @@ export default function VisitCTA() {
         <p className="mt-3 text-white/80">Plan your route, reserve times, and get concierge support.</p>
         <div className="mt-8 flex items-center justify-center gap-3">
           <a href="#hero" className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:opacity-90">Back to top</a>
-          <a href="/demo2" className="px-6 py-3 rounded-xl border border-white/40 hover:bg-white/10">See Heritage</a>
         </div>
       </div>
     </section>
