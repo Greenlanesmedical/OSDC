@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Autumn lighting scheme approved for West End",
+    "href": "https://example.com/news/autumn-lighting",
+    "tag": "Announcement",
+    "date": "2025-09-01"
+  },
+  {
+    "title": "Weekend pedestrianisation pilot extended",
+    "href": "https://example.com/news/pedestrianisation",
+    "tag": "Public realm",
+    "date": "2025-08-26"
+  },
+  {
+    "title": "Independent retailers showcase week launches",
+    "href": "https://example.com/news/retailers-week",
+    "tag": "Events",
+    "date": "2025-08-12"
+  },
+  {
+    "title": "Accessibility statement updated for WCAG 2.2",
+    "href": "https://example.com/news/a11y-update",
+    "tag": "Accessibility",
+    "date": "2025-07-30"
+  }
+]

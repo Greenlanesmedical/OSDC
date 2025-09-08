@@ -1,6 +1,6 @@
 export const SHOPS = [
-  { name: "Selfridges", category: "Department", address: "400 Oxford St, W1A 1AB" },
-  { name: "John Lewis", category: "Department", address: "300 Oxford St, W1C 1DX" },
+  { name: "Selfridges", category: "Department", address: "400 Oxford St, W1A 1AB", desc:"Iconic department store with luxury brands and food hall." },
+  { name: "John Lewis", category: "Department", address: "300 Oxford St, W1C 1DX", desc:"Home, fashion & tech; classic Oxford Street anchor." },
   { name: "ZARA", category: "Fashion", address: "333 Oxford St, W1C 2JF" },
   { name: "H&M", category: "Fashion", address: "174-176 Oxford St, W1D 1NX" },
   { name: "UNIQLO", category: "Fashion", address: "170 Oxford St, W1D 1NQ" },
