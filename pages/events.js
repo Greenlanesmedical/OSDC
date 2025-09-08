@@ -1,11 +1,10 @@
-import { useState, useMemo } from 'react';
 // pages/events.js
+import { useState, useMemo } from 'react';
 import HeritageHeader from '../components/HeritageHeader';
 import HeritageFooter from '../components/HeritageFooter';
 import SEOHead from '../components/SEOHead';
 import EventCard from '../components/EventCard';
 import Link from 'next/link';
-import { useState, useMemo } from 'react';
 
 export default function EventsPage({ items = [] }) {
   const [showPast, setShowPast] = useState(false);
@@ -67,7 +66,6 @@ export async function getStaticProps() {
     const raw = fs.readFileSync(dataPath, 'utf8');
     items = JSON.parse(raw);
   } catch (e) {
-    // fallback example
     items = [{
       title: 'Welcome to Oxford Street',
       start: new Date().toISOString(),
