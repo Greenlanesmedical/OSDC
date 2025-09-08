@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 export default function HeritageHeader() {
-  const items = ['Departments', 'Services', 'News', 'Visiting'];
+  const items = ['Overview','Background','Requirements','Brand','Website','Visiting'];
   return (
     <header className="w-full bg-white sticky top-0 z-40 shadow-subtle">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -12,7 +12,7 @@ export default function HeritageHeader() {
         </div>
         <nav className="flex-1 flex items-center justify-end gap-6 text-sm">
           {items.map(i => (
-            <Link key={i} href={i === "Visiting" ? "/demo2/getting-here" : ("#" + i.toLowerCase())} className="text-gray-800 hover:text-black">{i}</Link>
+            <Link key={i} href={i === "Visiting" ? "/getting-here" : ("#" + i.toLowerCase())} className="text-gray-800 hover:text-black">{i}</Link>
           ))}
         </nav>
       </div>

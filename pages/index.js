@@ -1,36 +1,55 @@
 // pages/index.js
-import Link from 'next/link';
-import ThemeToggle from '../components/ThemeToggle';
+import HeritageHeader from '../components/HeritageHeader';
+import HeritageHero from '../components/HeritageHero';
+import HeritageIntro from '../components/HeritageIntro';
+import HeritageBackground from '../components/HeritageBackground';
+import HeritageRequirements from '../components/HeritageRequirements';
+import HeritageBrand from '../components/HeritageBrand';
+import HeritageWebsite from '../components/HeritageWebsite';
+import HeritageServices from '../components/HeritageServices';
+import HeritageDepartments from '../components/HeritageDepartments';
+import ShopDirectory from '../components/ShopDirectory';
+import NewsCarousel from '../components/NewsCarousel';
+import Map from '../components/Map';
+import HeritageNewsletter from '../components/HeritageNewsletter';
+import HeritageFooter from '../components/HeritageFooter';
 
-export default function Landing() {
+export default function HeritageHome() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 dark:text-white transition-colors">
-      <div className="max-w-5xl w-full px-6 py-20">
-        <div className="flex items-center justify-between mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold">Choose Experience</h1>
-          <ThemeToggle />
+    <main className="min-h-screen bg-white">
+      <HeritageHeader />
+      <HeritageHero />
+      <HeritageIntro />
+      <HeritageBackground />
+      <HeritageRequirements />
+      <HeritageBrand />
+      <HeritageWebsite />
+      <HeritageDepartments />
+      <HeritageServices />
+      <section className="heritage-bg py-14">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="font-head text-3xl mb-6">Shop Directory</h2>
+          <div className="p-4 rounded-xl bg-white border gold-border shadow-subtle">
+            <ShopDirectory />
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <Link href="/demo1" className="block border dark:border-white/20 rounded-2xl card-hover overflow-hidden bg-white dark:bg-neutral-900">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src="/hero-modern.jpg" alt="Modern Luxe preview" className="w-full h-full object-cover" />
-            </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">Modern Luxe</h2>
-              <p className="text-gray-600 dark:text-gray-300">Sleek, immersive Oxford Street experience.</p>
-            </div>
-          </Link>
-          <Link href="/demo2" className="block border dark:border-white/20 rounded-2xl card-hover overflow-hidden bg-white dark:bg-neutral-900">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src="/hero-heritage.jpg" alt="Heritage preview" className="w-full h-full object-cover" />
-            </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-2 font-head">Heritage</h2>
-              <p className="text-gray-600 dark:text-gray-300">Editorial, department-store style.</p>
-            </div>
-          </Link>
+      </section>
+      <section className="py-10 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="font-head text-3xl mb-6">News</h2>
+          <NewsCarousel />
         </div>
-      </div>
+      </section>
+      <section className="py-10 heritage-bg">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="font-head text-3xl mb-6">Find Us</h2>
+          <div className="rounded-xl overflow-hidden border gold-border shadow-subtle">
+            <Map />
+          </div>
+        </div>
+      </section>
+      <HeritageNewsletter />
+      <HeritageFooter />
     </main>
   );
 }
