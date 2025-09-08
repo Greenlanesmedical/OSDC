@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // components/HeritageDepartments.js
 const DEPTS = [
   { name: 'Fashion', href: '#', img: '/feature-1.jpg' },

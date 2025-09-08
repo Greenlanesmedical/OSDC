@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // components/HeritageFeatureRows.js
 const FEATURES = [
   { title: 'Seasonal Windows', copy: 'A celebration of craft and theatre along Oxford Street.', img: '/feature-1.jpg' },

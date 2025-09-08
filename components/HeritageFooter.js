@@ -1,3 +1,4 @@
+'use client';
 // components/HeritageFooter.js
 export default function HeritageFooter() {
   return (
@@ -36,7 +37,10 @@ export default function HeritageFooter() {
           </ul>
         </div>
       </div>
-      <div className="text-center text-xs opacity-80 py-4 border-t border-white/20">© Heritage Oxford Street</div>
-    </footer>
+      <div className="text-center text-xs opacity-80 py-4 border-t border-white/20">© Heritage Oxford Street · <button onClick={() => { try { localStorage.removeItem('osdc-consent'); document.documentElement.classList.remove('dark'); alert('Demo settings reset.'); } catch(e){} }} className="underline">Reset demo settings</button></div>
+      <div className="mt-2 text-sm">
+    <a className="underline" href="/privacy">Privacy</a> · <a className="underline" href="/cookies">Cookies</a> · <a className="underline" href="/accessibility">Accessibility</a> · <a className="underline" href="/publication-scheme">Publication Scheme</a> · <a className="underline" href="/contact">Contact</a>
+  </div>
+</footer>
   );
 }

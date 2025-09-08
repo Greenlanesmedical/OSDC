@@ -1,3 +1,4 @@
+import Image from 'next/image';
 // components/GettingHere.js
 export default function GettingHere({ variant = 'modern' }) {
   const iconPath = (base) => (variant === 'heritage' ? `/icon-${base}-outline.svg` : `/icon-${base}.svg`);
@@ -20,12 +21,15 @@ export default function GettingHere({ variant = 'modern' }) {
               <img src={iconPath('tube')} alt="Tube" className="w-10 h-10" />
               <div className="text-lg font-semibold">Tube</div>
             </div>
+            
             <ul className="mt-3 text-gray-700 space-y-1">
-              <li><strong>Oxford Circus</strong> — Central, Bakerloo, Victoria</li>
-              <li><strong>Bond Street</strong> — Central, Elizabeth</li>
-              <li><strong>Tottenham Court Road</strong> — Central, Elizabeth</li>
-              <li><strong>Marble Arch</strong> — Central</li>
+              <li><strong><a className="underline" href="https://tfl.gov.uk/tube/stop/940GZZLUOXC/oxford-circus-underground-station" target="_blank" rel="noreferrer">Oxford Circus (TfL)</a></strong> — Central, Bakerloo, Victoria</li>
+              <li><strong><a className="underline" href="https://tfl.gov.uk/tube/stop/940GZZLUBND/bond-street-underground-station" target="_blank" rel="noreferrer">Bond Street (TfL)</a></strong> — Central, Elizabeth</li>
+              <li><strong><a className="underline" href="https://tfl.gov.uk/tube/stop/940GZZLUTCR/tottenham-court-road-underground-station" target="_blank" rel="noreferrer">Tottenham Court Road (TfL)</a></strong> — Central, Elizabeth</li>
+              <li><strong><a className="underline" href="https://tfl.gov.uk/tube/stop/940GZZLUMBA/marble-arch-underground-station" target="_blank" rel="noreferrer">Marble Arch (TfL)</a></strong> — Central</li>
             </ul>
+            <p className="mt-2 text-xs text-gray-600">Step-free access available at Bond Street (Elizabeth line) and Tottenham Court Road (Elizabeth line). Check current status.</p>
+        
             <div className="mt-4 flex flex-wrap gap-2 station-chips">
               <span className="px-3 py-1 rounded-full border bg-white text-sm">Oxford Circus · 3 min walk</span>
               <span className="px-3 py-1 rounded-full border bg-white text-sm">Bond Street · 5 min walk</span>
@@ -116,7 +120,11 @@ export default function GettingHere({ variant = 'modern' }) {
 
         <div className="mt-8 rounded-2xl overflow-hidden border shadow-subtle">
           <img src={isHeritage ? '/hero-heritage.jpg' : '/hero-modern.jpg'} alt="Oxford Street" className="w-full h-[320px] object-cover" />
+        
+        <div className="mt-8 rounded-2xl overflow-hidden border shadow-subtle">
+          <Image src="/isochrone-oxford-street.webp" alt="Walking times to Oxford Street" width={1600} height={900} className="w-full h-[320px] object-cover" />
         </div>
+        
       </div>
     </section>
   );

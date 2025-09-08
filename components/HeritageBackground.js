@@ -5,6 +5,7 @@ export default function HeritageBackground() {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <h2 className="font-head text-3xl">Background</h2>
+        <p className="text-sm text-gray-600 mt-1 micro-intro">Why Oxford Street must evolve now — the context and mandate for OSDC.</p>
           <p className="mt-3 text-gray-700">
             Oxford Street contributes ~£25bn annually and attracts ~120m visitors each year. Recent
             headwinds—pandemic impacts and the growth of online shopping—mean the street must evolve quickly to

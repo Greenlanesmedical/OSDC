@@ -4,6 +4,7 @@ export default function HeritageWebsite() {
     <section id="website" className="heritage-bg py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="font-head text-3xl">Website</h2>
+        <p className="text-sm text-gray-600 mt-1 micro-intro">The public face of OSDC — accessible, performant, and ready for phased delivery.</p>
         <p className="mt-3 text-gray-700 max-w-3xl">
           The public face of OSDC—designed around user needs with phased discovery, options and iterative feedback.
           Built for performance, security and accessibility, with UK-based hosting.

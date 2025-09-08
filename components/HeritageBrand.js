@@ -4,6 +4,7 @@ export default function HeritageBrand() {
     <section id="brand" className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="font-head text-3xl">Brand Identity</h2>
+        <p className="text-sm text-gray-600 mt-1 micro-intro">A modern, credible identity that scales across channels and feels distinctly Oxford Street.</p>
         <p className="mt-3 text-gray-700 max-w-3xl">
           We will develop a consistent, recognisable identity that is professional, high quality and flexible across
           channels. The brand will reflect OSDC’s ethos and the Mayor’s ambitions for regeneration.
